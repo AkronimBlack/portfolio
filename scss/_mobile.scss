@@ -1,0 +1,145 @@
+//Xl
+@include mediaXl{
+
+
+}
+//LG
+@include mediaLg{
+
+    
+}
+//MD
+@include mediaMd{
+    main{
+        
+            
+        font-size: 10px;
+        align-items: center;
+        text-align: center;
+
+        .lg-heading{
+            font-size: 30px;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .about-info{
+            font-size: 10px;
+            display: grid;
+            grid-gap: 30px;
+            grid-template-areas: 
+            'bioimage'
+            'bio'
+            'bio'
+            'job1'
+            'job2'
+            'job3';
+            grid-template-columns: repeat(1, 1fr);
+
+            .bioimage , .bio , .job1 , .job2 , .job3{
+                font-size: 15px;
+            }
+            
+        }
+
+        .skill-set{
+            font-size: 10px;
+            display: grid;
+            grid-gap: 30px;
+            grid-template-areas: 
+            'col1' 
+            'col2' 
+            'col3' 
+            'col4'
+            'row1' 
+            'row3';
+            grid-template-columns: repeat(1, 1fr);
+
+            .col1 , .col2 , .col3 , .col4 , .job3 , .row1 , .row3{
+                font-size: 15px;
+            }
+
+            .col1{
+                grid-area: col1;
+                display: grid;
+                grid-gap: 5px;
+                grid-template-areas: 
+                'left' 
+                'right'
+                'bot-left' 
+                'bot-right';
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        &#degordian{
+            .pic{
+                visibility: hidden;
+            }
+            .why{
+                visibility: hidden;
+            }
+        }
+    }
+
+    ul.menu-nav,
+    div.menu-branding{
+        float: none;
+        width: 100%;
+        min-height: 0;
+        opacity: 1;
+        &.show{
+            transform: translate3d(0,0,0);
+        }
+    }
+    .menu-nav{
+        height: 75vh;
+        transform: translate3d(-100%,0,0);
+        font-size: 25px;
+    }    
+    .menu-branding{
+        height: 25vh;
+        transform: translate3d(100%,0,0);
+        .portrait{
+            width: 220px;
+            margin: 10px;
+        }
+    }
+
+    
+
+}
+
+//SM
+@include mediaSm{
+    main#home h1{
+        margin-top: 10vh;
+        font-size: 45px;
+    }
+    .menu-nav{
+        height: 75vh;
+    }
+    
+    .menu-branding{
+        height: 25vh;
+        transform: translate3d(100%,0,0);
+        .portrait{            
+            width: 100px;
+            margin: 10px;
+        }        
+    }
+
+    @media screen and (min-height:500px){ 
+        .menu-nav{
+            height: 75vh;
+        }
+        .menu-branding{
+            height: 25vh;
+            transform: translate3d(100%,0,0);
+            .portrait{            
+                width: 110px;
+                margin: 10px;
+            }        
+        }
+    }
+}

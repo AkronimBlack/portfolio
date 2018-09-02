@@ -1,18 +1,20 @@
-.menu-btn{
+.menu-btn{    
     position: absolute;
-    z-index: 3;
+    z-index: 9;
     right: 35px;
     top: 35px;
     cursor: pointer;
-    @include easeOut;
-
-    .btn-line{
-        width: 28px;
+    @include easeOut;   
+    
+    .btn-line{        
+        width: 30px;
         height: 3px;
         margin: 0 0  5px 0;
         background: #fff;
         @include easeOut;
     }
+
+    
 
     //on click events
     &.close{
@@ -31,12 +33,11 @@
         }
     }
 }
-
-.menu{
+.menu{    
     position: fixed;
     top:0;
     width: 100%;
-    visibility: hidden;
+    visibility: hidden;    
 
     &.show{
         visibility: visible;
@@ -51,11 +52,11 @@
         width: 50%;
         height: 100vh;
         overflow: hidden;
-        opacity: 0.9;
+        opacity: 1;
     }
 
 
-    &-nav{
+    &-nav{        
         margin: 0;
         padding: 0;
         background: darken($primary-color,5);
@@ -88,25 +89,30 @@
             border: solid 3px $secondary-color;
             transform: translate3d(-200% , 0 , 0);
             @include easeOut;
-            &.show{
-                
+            &.show{                
             transition-delay: 0.5s;
                 transform: translate3d(0 , 0 ,0);
             }
         }    
     }
 
-    .nav-item{
-        transform: translate3d(600px,0,0);
-        @include easeOut;
+    .nav-item{         
+        transform: translate3d(600px,0,0);        
+        @include easeOut;        
         &.show{                        
             transform: translate3d(0 , 0 ,0);
         }
 
         &.current > a {
-            color: $secondary-color;
-        }
+            color: $secondary-color; 
+        }        
     }
+    .pulsate {
+        -webkit-animation: pulsate 2s ease-out;
+        -webkit-animation-iteration-count: infinite;
+        opacity: 1;
+    }
+    
 
     .nav-link{
         display: inline-block;
@@ -123,7 +129,20 @@
             @include easeOut();
         }
     }
+
+    .icons{
+        margin-top: 1rem;
+        a{
+            padding: 0.4rem;
+
+            &:hover{
+                color: $secondary-color;
+                @include easeOut();
+            }
+        }
+    }
 }
+
 
 //deley each nad item slide by x
 @for $x from 1 through 4 {
@@ -131,3 +150,8 @@
         transition-delay: $x * 0.1s;
     }
 }
+
+
+
+
+
