@@ -93,7 +93,7 @@
     .menu-branding .portrait {
       width: 350px;
       height: 350px;
-      background: url(/img/profile.jpg);
+      background: url(../img/profile.jpg);
       background-position: 50% 50%;
       background-repeat: no-repeat;
       background-size: cover;
@@ -158,7 +158,7 @@ body {
   font-family: 'Sawarabi Mincho', sans-serif;
   line-height: 1.5; }
   body#bg-img {
-    background: url(/img/background.jpg);
+    background: url(../img/background.jpg);
     background-attachment: fixed;
     background-size: cover; }
   body:after {
